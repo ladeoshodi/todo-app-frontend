@@ -1,5 +1,7 @@
+import Home from "./components/Home";
+
 function App() {
-  return <h1>Hello Project 3!</h1>
+  return <Home />;
 }
 
-export default App
+export default App;
