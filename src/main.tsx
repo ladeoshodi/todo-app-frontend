@@ -4,12 +4,16 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./styles/main.css";
 import App from "./App";
 import Home from "./components/Home";
+import TaskList from "./components/TaskList";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    children: [{ path: "/", element: <Home /> }],
+    children: [
+      { path: "/", element: <Home /> },
+      { path: "/tasks", element: <TaskList /> },
+    ],
   },
 ]);
 
