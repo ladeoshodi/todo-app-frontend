@@ -6,6 +6,7 @@ import App from "./App";
 import Home from "./components/Home";
 import TaskList from "./components/TaskList";
 import ShowTask from "./components/ShowTask";
+import Signup from "./components/Signup";
 
 const router = createBrowserRouter([
   {
@@ -15,7 +16,7 @@ const router = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "/tasks", element: <TaskList /> },
       { path: "/tasks/:taskId", element: <ShowTask /> },
-      { path: "/signup", element: <p>Sign Up</p> },
+      { path: "/signup", element: <Signup /> },
       { path: "/login", element: <p>Login</p> },
       { path: "/create", element: <p>Create Task</p> },
     ],
