@@ -34,7 +34,26 @@ function TaskList() {
                       <div className="card-header-title">{task.name}</div>
                     </div>
                     <div className="card-content">
-                      <h5>{task.status}</h5>
+                      <h4>owner: {task.owner.username}</h4>
+                      <h5>
+                        collaborators:{" "}
+                        <ul>
+                          {task.collaborators?.map((collaborator) => {
+                            return (
+                              <li key={collaborator._id}>
+                                - {collaborator.username}
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      </h5>
+                      <h5>status: {task.status}</h5>
+                      <h5>priority: {task.priority}</h5>
+                      <h5>
+                        {task.isCompleted ? "Completed" : "Not Completed"}
+                      </h5>
+                      <h6>Created At: {task.createdAt}</h6>
+                      <h6>Updated At: {task.updatedAt}</h6>
                     </div>
                   </div>
                 </Link>

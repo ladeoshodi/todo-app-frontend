@@ -15,4 +15,6 @@ export interface ITask {
   isCompleted: boolean;
   collaborators: Array<IUser>;
   subtasks: Array<ISubtask>;
+  createdAt: string;
+  updatedAt: string;
 }
